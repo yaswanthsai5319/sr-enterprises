@@ -6,7 +6,10 @@
       "Bash(mkdir -p /tmp/sr-images)",
       "Bash(cp *.jpeg /tmp/sr-images/)",
       "Bash(rm *.jpeg)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
