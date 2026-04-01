@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(mkdir -p /tmp/sr-images)",
+      "Bash(cp *.jpeg /tmp/sr-images/)",
+      "Bash(rm *.jpeg)",
+      "Bash(cp:*)"
+    ]
+  }
+}
