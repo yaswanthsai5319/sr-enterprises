@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "MANUFACTURER & SUPPLIER",
+    "title": "Fruit Covers & Packaging Bags",
+    "description": "Quality products for farmers & businesses since 2025",
+    "whatsapp": "WhatsApp Us",
+    "call": "Call Now",
+    "fruitCovers": "Fruit Covers",
+    "lenoBags": "Leno Bags",
+    "ppBags": "PP Woven Bags"
+  },
+  "why": {
+    "title": "Why Use Fruit Protection Covers?",
+    "subtitle": "See the difference they make",
+    "noInsects": "No Insects",
+    "noInsectsDesc": "Protects fruit from pests without chemicals",
+    "sunShield": "Sun & Rain Shield",
+    "sunShieldDesc": "Guards against sunburn and rain damage",
+    "betterPrice": "Better Price",
+    "betterPriceDesc": "Unblemished fruit sells at premium rates",
+    "without": "WITHOUT COVER",
+    "withoutDesc": "Spots, insect marks, lower price",
+    "with": "WITH COVER",
+    "withDesc": "Clean, premium quality, top price"
+  },
+  "products": {
+    "title": "Our Products",
+    "enquire": "Enquire Now",
+    "fruitCovers": {
+      "name": "Fruit Protection Covers",
+      "description": "Non-woven covers for mango, grapes, pomegranate, dragon fruit, orange & more",
+      "tag1": "Pest Free",
+      "tag2": "Reusable",
+      "tag3": "Breathable"
+    },
+    "lenoBags": {
+      "name": "Leno Mesh Bags",
+      "description": "Breathable mesh bags for onions, potatoes, vegetables — available in all colors & sizes",
+      "tag1": "Ventilated",
+      "tag2": "Strong",
+      "tag3": "Custom Sizes"
+    },
+    "ppBags": {
+      "name": "PP Woven Bags",
+      "description": "Heavy-duty woven bags for rice, fertilizer, grains, cement — with custom printing",
+      "tag1": "Heavy Duty",
+      "tag2": "Custom Print",
+      "tag3": "Bulk Orders"
+    }
+  },
+  "about": {
+    "title": "About Our Factory",
+    "machinery": "Modern Machinery",
+    "machineryDesc": "Advanced manufacturing equipment",
+    "location": "Andhra Pradesh",
+    "locationDesc": "Vijayawada - Nuzvid Road",
+    "delivery": "All India Delivery",
+    "deliveryDesc": "We ship across the country",
+    "quality": "Quality Assured",
+    "qualityDesc": "Tested & trusted products"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Products • Machines • Results"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Tap to call or message",
+    "whatsapp": "Chat on WhatsApp",
+    "call": "Call",
+    "address": "Factory Address",
+    "addressText": "Burri Venkateswara Gardens, Pothavarappadu, Agiripalli Mandal, 521212, Eluru District, Andhra Pradesh, Vijayawada - Nuzvid Road",
+    "openMaps": "Open in Google Maps",
+    "email": "Email",
+    "copyright": "© 2025 SR Enterprises. All rights reserved."
+  }
+}

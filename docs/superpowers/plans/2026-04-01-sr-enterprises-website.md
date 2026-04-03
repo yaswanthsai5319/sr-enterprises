@@ -1,3 +1,206 @@
+# SR Enterprises Website Implementation Plan (Senior Revision)
+
+Date: 2026-04-01
+Owner: SR Enterprises web team
+Status: Draft v2 (UX-first, end-user-first)
+
+## Why this revision
+
+The original plan is a strong implementation checklist, but it is code-first.
+This revision makes it user-first and conversion-first while staying practical for engineering.
+
+## Product outcomes (what success looks like)
+
+- A first-time visitor can understand products and contact SR Enterprises in under 30 seconds.
+- A mobile user can start WhatsApp chat or call in at most 2 taps from any section.
+- The site works reliably in EN, HI, and TE with accurate, readable translations.
+- The website feels trustworthy: clear visuals, real photos, factory credibility, and consistent branding.
+
+## Primary user journeys
+
+1. Farmer (mobile, low patience)
+- Lands on home page
+- Quickly understands product relevance
+- Taps WhatsApp or Call CTA
+
+2. Wholesaler / distributor
+- Reviews product cards and specs
+- Validates factory credibility via About + Gallery
+- Contacts sales via WhatsApp with intent context
+
+3. Returning visitor
+- Reopens site from shared link
+- Switches language
+- Navigates directly to products or contact
+
+## Experience principles
+
+- Conversion clarity over visual noise.
+- Mobile-first touch targets (minimum 48px).
+- Readability first for multilingual copy.
+- Trust signals in every fold.
+- Fast page loads on low-bandwidth networks.
+
+## Visual direction and styling system
+
+### Brand direction
+
+- Tone: practical, agricultural, trustworthy, modern.
+- Use real product/factory imagery as primary visual proof.
+- Avoid generic startup look; no purple-heavy palette.
+
+### Color tokens
+
+- `--color-primary`: `#1a1f36` (deep navy)
+- `--color-accent`: `#c8a84e` (warm gold)
+- `--color-whatsapp`: `#25D366`
+- `--color-surface`: `#ffffff`
+- `--color-surface-alt`: `#f6f8fb`
+- `--color-text`: `#121826`
+- `--color-muted`: `#5b6475`
+
+### Typography (locale-aware)
+
+- English: `Manrope`
+- Hindi: `Noto Sans Devanagari`
+- Telugu: `Noto Sans Telugu`
+- Keep body text >= 16px on mobile for readability.
+
+### Interaction style
+
+- Sticky nav with clear section anchors.
+- Subtle reveal animations only (no distracting motion).
+- CTA states: default, hover, focus-visible, active, disabled.
+- Clear visual focus rings for keyboard users.
+
+## Content and copy standards
+
+- Hero headline must communicate what SR Enterprises manufactures in plain language.
+- Each product card must answer: what it is, who it is for, why buy it.
+- Contact section must prioritize action buttons above all other details.
+- All locale files must be native-reviewed (not machine-only) before launch.
+
+## Technical guardrails (Next.js + maintainability)
+
+- Use current Next.js conventions for v16+.
+- Replace deprecated `middleware.ts` approach with `proxy.ts` convention.
+- Keep section components modular and mostly server components.
+- Use client components only for interactive units (menu, language toggle, lightbox).
+- Keep one source of truth for translation keys and route locales.
+
+## Revised execution plan
+
+### Phase 0: Baseline cleanup and alignment
+
+- [ ] Confirm runtime baseline: Next.js, React, next-intl versions and any deprecations.
+- [ ] Replace deprecated request interception pattern with Next.js 16 `proxy.ts` pattern.
+- [ ] Remove leftover starter artifacts (`src/app/page.tsx` demo content, default metadata, default favicon if unused).
+- [ ] Set metadata and title templates for SEO and trust.
+- [ ] Define workspace root explicitly in `next.config.ts` if Turbopack root warning persists.
+
+Definition of done:
+- Build/dev runs without deprecation warnings from known outdated conventions.
+
+### Phase 1: Information architecture and conversion skeleton
+
+- [ ] Implement locale route structure (`/en`, `/hi`, `/te`) with stable fallback behavior.
+- [ ] Build sticky navbar with section anchors and clear active state.
+- [ ] Add persistent conversion actions: hero CTA and floating WhatsApp CTA.
+- [ ] Ensure every major section includes at least one route to contact action.
+
+Definition of done:
+- A user can reach WhatsApp or phone contact from any major section in <= 2 taps.
+
+### Phase 2: Style system and UI consistency
+
+- [ ] Create CSS variables for palette, spacing, radius, and shadows.
+- [ ] Add typography scale and consistent heading hierarchy.
+- [ ] Standardize card, button, chip, and section spacing components/patterns.
+- [ ] Add a subtle textured/gradient background strategy (not flat single-color pages).
+
+Definition of done:
+- UI appears consistent across all sections with shared tokens and components.
+
+### Phase 3: Section implementation (content + usability)
+
+- [ ] Hero: clear value proposition, immediate dual CTA, product category cues.
+- [ ] Why section: benefit cards plus before/after proof image.
+- [ ] Products section: strong card layout, feature tags, contextual WhatsApp message per product.
+- [ ] About section: trust signals (machinery, location, delivery, quality).
+- [ ] Gallery: fast grid + accessible lightbox.
+- [ ] Contact/footer: action-first layout with map/email/support details.
+
+Definition of done:
+- All key business sections are present and readable on mobile and desktop.
+
+### Phase 4: Localization quality pass
+
+- [ ] Validate all EN/HI/TE keys are complete and consistent.
+- [ ] Fix encoding issues and ensure proper Unicode rendering.
+- [ ] Add locale-specific microcopy where cultural context improves clarity.
+- [ ] Verify language switch preserves current route/section context.
+
+Definition of done:
+- No missing keys, no mojibake, no broken language switch flows.
+
+### Phase 5: Accessibility, performance, and trust
+
+- [ ] Run accessibility checks (keyboard navigation, focus order, contrast, alt text).
+- [ ] Optimize images (dimensions, compression, lazy loading, priority for above-the-fold).
+- [ ] Verify Core Web Vitals targets on mobile-grade network.
+- [ ] Add structured data (`Organization`, `LocalBusiness`) and social metadata.
+
+Definition of done:
+- Lighthouse mobile targets: Performance >= 80, Accessibility >= 90, Best Practices >= 90, SEO >= 90.
+
+### Phase 6: QA, launch, and measurement
+
+- [ ] Test matrix: devices (small Android, iPhone, desktop), browsers (Chrome, Safari, Edge), locales.
+- [ ] Verify all external actions (WhatsApp, tel, maps, email) work in each locale.
+- [ ] Deploy to Vercel and complete smoke test on production URL.
+- [ ] Add lightweight analytics events for conversion tracking.
+
+Definition of done:
+- Production launch complete with verified lead-capture paths.
+
+## Measurement plan (post-launch)
+
+Track weekly:
+
+- CTA click-through rate (WhatsApp, Call, Maps)
+- Locale split by sessions
+- Product section to contact conversion rate
+- Mobile bounce rate
+- Time to first interaction (TTFI)
+
+## Prioritized backlog after launch
+
+- [ ] Add FAQ section from real customer objections.
+- [ ] Add product inquiry form with prefilled product context.
+- [ ] Add downloadable product sheet (PDF) in EN/HI/TE.
+- [ ] Add social proof (testimonials, buyer logos) when available.
+- [ ] Add campaign-specific landing pages for seasonal demand.
+
+## Current baseline snapshot (as of 2026-04-01)
+
+Already in place:
+
+- Next.js scaffold and project dependencies
+- Renamed image assets in `public/images`
+- `next-intl` base setup (`messages`, `routing`, `request`)
+- Smooth-scroll CSS
+
+Not yet in place:
+
+- Locale route layout and section components
+- End-to-end UX flow and styling system
+- Accessibility/performance/launch verification
+
+---
+
+## Legacy Detailed Plan (Reference)
+
+The original detailed checklist is preserved below for historical tracking.
 # SR Enterprises Website Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
@@ -1455,3 +1658,4 @@ git add .
 git commit -m "chore: add Vercel deployment config"
 git push
 ```
+
