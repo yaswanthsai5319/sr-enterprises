@@ -44,7 +44,7 @@ export default function Navbar() {
               SR Enterprises
             </p>
             <p className="text-[10px] uppercase tracking-[0.15em] text-[var(--gold)]/80">
-              Est. 2025
+              Est. 2026
             </p>
           </div>
         </a>

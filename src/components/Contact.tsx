@@ -6,7 +6,7 @@ import FadeIn from "./FadeIn";
 const WHATSAPP_URL =
   "https://wa.me/919985636699?text=Hi%2C%20I'm%20interested%20in%20your%20products";
 const MAPS_URL =
-  "https://www.google.com/maps/search/Burri+Venkateswara+Gardens+Pothavarappadu+Agiripalli+521212";
+  "https://www.google.com/maps/search/SR+Enterprises+Burri+Venkateswarao+Gardens+Vijayawada+To+Nuzivid+Road+Pothavarappadu+Agiripalli+Mandal+Eluru+District+521212+Andhra+Pradesh";
 
 export default function Contact() {
   const t = useTranslations("contact");

@@ -8,6 +8,8 @@ import FadeIn from "./FadeIn";
 
 const images = [
   { src: "/images/fruit-covers-product.jpeg", alt: "Fruit protection covers" },
+  { src: "/images/protected-mango.jpg", alt: "Protected mango – with cover" },
+  { src: "/images/unprotected-mango.jpg", alt: "Unprotected mango – without cover" },
   { src: "/images/leno-mesh-bags-vegetables.jpeg", alt: "Leno mesh bags with vegetables" },
   { src: "/images/leno-mesh-rolls.jpeg", alt: "Leno mesh rolls" },
   { src: "/images/pp-woven-bags-rice.jpeg", alt: "PP woven bags for rice" },
@@ -15,9 +17,9 @@ const images = [
   { src: "/images/mango-result.jpeg", alt: "Premium mangoes" },
   { src: "/images/machine-leno.jpeg", alt: "Leno mesh machinery" },
   { src: "/images/machine-paper-bag.jpeg", alt: "Bag manufacturing machine" },
+  { src: "/images/printer-for-pp-woven.jpg", alt: "Printer for PP woven bags" },
 ];
 
-// Double for infinite marquee
 const marquee = [...images, ...images];
 
 export default function Gallery() {
@@ -72,30 +74,6 @@ export default function Gallery() {
           </div>
         </div>
       </FadeIn>
-
-      {/* ── Grid ── */}
-      <div className="section-max">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {images.map((img, i) => (
-            <FadeIn key={img.src} delay={i * 0.04}>
-              <button
-                type="button"
-                onClick={() => setLb(i)}
-                className="group relative aspect-square w-full overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-lg"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-t from-[var(--navy)]/50 to-transparent" />
-              </button>
-            </FadeIn>
-          ))}
-        </div>
-      </div>
 
       {/* ── Lightbox ── */}
       <AnimatePresence>

@@ -55,6 +55,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)] via-[var(--navy)]/30 to-[var(--navy)]/50" />
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--cream)] to-transparent" />
 
+
       {/* ── Content ── */}
       <div className="relative section-max px-5 sm:px-8 flex flex-col justify-end min-h-dvh pb-28 pt-32 lg:pb-36 lg:pt-40">
         <div className="max-w-xl">
@@ -78,6 +79,15 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65, duration: 0.7 }}
+            className="mt-4 font-display text-sm font-semibold uppercase tracking-widest text-[var(--gold)]"
+          >
+            Supporting Farmers for the Future
+          </motion.p>
+
+          <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7 }}
@@ -97,7 +107,7 @@ export default function Hero() {
               <a
                 key={key}
                 href="#products"
-                className="glass rounded-full px-4 py-2 text-[13px] font-medium text-white/90 transition-all hover:bg-white/15 hover:text-white"
+                className="glass rounded-full px-3 py-1 text-[11px] font-medium text-white/90 transition-all hover:bg-white/15 hover:text-white"
               >
                 {t(key)}
               </a>

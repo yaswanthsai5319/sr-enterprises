@@ -56,9 +56,7 @@ export default function Products() {
                       className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.08]"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                    {/* Accent bar */}
                     <div className={`absolute bottom-0 inset-x-0 h-[3px] ${p.accent} transition-all duration-500 scale-x-0 group-hover:scale-x-100 origin-left`} />
                   </div>
 

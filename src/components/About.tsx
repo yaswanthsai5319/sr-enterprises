@@ -43,7 +43,7 @@ export default function About() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 left-6 rounded-xl bg-[var(--navy)] text-white px-5 py-3 shadow-xl">
-                <p className="font-display text-2xl font-bold text-[var(--gold)]">Est. 2025</p>
+                <p className="font-display text-2xl font-bold text-[var(--gold)]">Est. 2026</p>
                 <p className="text-[11px] text-white/60 uppercase tracking-wider">Andhra Pradesh</p>
               </div>
             </div>
@@ -60,6 +60,11 @@ export default function About() {
               fruit protection covers, leno mesh bags, and PP woven bags —
               serving farmers and businesses across India with reliable products
               and dependable service.
+            </p>
+            <p className="mt-3 text-[15px] leading-relaxed text-[var(--muted)]">
+              We can customize PP woven bags as per customer needs — including
+              size, print, color, and design — to match your brand or
+              agricultural requirements.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-3">
