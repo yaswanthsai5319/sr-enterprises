@@ -9,7 +9,6 @@ import FadeIn from "./FadeIn";
 const images = [
   { src: "/images/fruit-covers-product.jpeg", alt: "Fruit protection covers" },
   { src: "/images/protected-mango.jpg", alt: "Protected mango – with cover" },
-  { src: "/images/unprotected-mango.jpg", alt: "Unprotected mango – without cover" },
   { src: "/images/leno-mesh-bags-vegetables.jpeg", alt: "Leno mesh bags with vegetables" },
   { src: "/images/leno-mesh-rolls.jpeg", alt: "Leno mesh rolls" },
   { src: "/images/pp-woven-bags-rice.jpeg", alt: "PP woven bags for rice" },
