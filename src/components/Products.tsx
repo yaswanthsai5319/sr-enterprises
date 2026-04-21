@@ -5,32 +5,29 @@ import { useTranslations } from "next-intl";
 import FadeIn from "./FadeIn";
 
 const products = [
-  {
-    key: "fruitCovers",
-    image: "/images/fruit-covers-product.jpeg",
-    tag: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    accent: "bg-emerald-500",
-  },
-  {
-    key: "lenoBags",
-    image: "/images/leno-mesh-bags-vegetables.jpeg",
-    tag: "bg-amber-50 text-amber-700 border-amber-200",
-    accent: "bg-amber-500",
-  },
-  {
-    key: "ppBags",
-    image: "/images/pp-woven-bags-rice.jpeg",
-    tag: "bg-blue-50 text-blue-700 border-blue-200",
-    accent: "bg-blue-500",
-  },
+  { key: "fruitCovers", image: "/images/gallery-3.jpeg" },
+  { key: "lenoBags", image: "/images/leno-mesh-bags-vegetables.jpeg" },
+  { key: "ppBags", image: "/images/pp-woven-bags-rice.jpeg" },
+] as const;
+
+const crops = [
+  { key: "mango", emoji: "🥭" },
+  { key: "grapes", emoji: "🍇" },
+  { key: "pomegranate", emoji: "🍎" },
+  { key: "dragonFruit", emoji: "🐉" },
+  { key: "orange", emoji: "🍊" },
+  { key: "guava", emoji: "🫒" },
 ] as const;
 
 function whatsapp(name: string) {
-  return `https://wa.me/919985636699?text=${encodeURIComponent(`Hi, I'm interested in ${name}`)}`;
+  return `https://wa.me/919985636699?text=${encodeURIComponent(
+    `Hi, I'm interested in ${name}`
+  )}`;
 }
 
 export default function Products() {
   const t = useTranslations("products");
+  const tc = useTranslations("crops");
 
   return (
     <section id="products" className="section-wrap bg-[var(--warm-gray)]">
@@ -45,9 +42,8 @@ export default function Products() {
           {products.map((p, i) => {
             const name = t(`${p.key}.name`);
             return (
-              <FadeIn key={p.key} delay={0.1 + i * 0.12}>
+              <FadeIn key={p.key} delay={0.1 + i * 0.1}>
                 <article className="card overflow-hidden group flex flex-col h-full">
-                  {/* Image */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={p.image}
@@ -56,20 +52,27 @@ export default function Products() {
                       className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.08]"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                    <div className={`absolute bottom-0 inset-x-0 h-[3px] ${p.accent} transition-all duration-500 scale-x-0 group-hover:scale-x-100 origin-left`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute bottom-0 inset-x-0 h-[3px] bg-[var(--forest-accent)] transition-all duration-500 scale-x-0 group-hover:scale-x-100 origin-left" />
                   </div>
 
-                  {/* Content */}
                   <div className="flex flex-col flex-1 p-6">
-                    <h3 className="font-display text-xl font-bold text-[var(--navy)]">{name}</h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-[var(--muted)] flex-1">
+                    <h3 className="font-display text-xl font-semibold text-[var(--forest-dark)]">
+                      {name}
+                    </h3>
+                    <p className="mt-2.5 text-sm leading-relaxed text-[var(--ink-muted)] flex-1">
                       {t(`${p.key}.description`)}
                     </p>
 
+                    {/* Specs row */}
+                    <p className="mt-3 text-[13px] font-medium text-[var(--forest-mid)]">
+                      ✓ {t(`${p.key}.specs`)}
+                    </p>
+
+                    {/* Green pills */}
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {(["tag1", "tag2", "tag3"] as const).map((tag) => (
-                        <span key={tag} className={`pill ${p.tag}`}>
+                        <span key={tag} className="pill pill-forest">
                           {t(`${p.key}.${tag}`)}
                         </span>
                       ))}
@@ -92,6 +95,36 @@ export default function Products() {
             );
           })}
         </div>
+
+        {/* Crop compatibility chart — under Fruit Covers */}
+        <FadeIn delay={0.3} className="mt-14">
+          <div className="rounded-2xl bg-white border border-black/[0.06] p-6 sm:p-8 shadow-sm">
+            <div className="flex items-center gap-2 mb-5">
+              <span className="text-xl">🥭</span>
+              <h3 className="font-display text-lg font-semibold text-[var(--forest-dark)]">
+                {t("cropTitle")} — {t("fruitCovers.name")}
+              </h3>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
+              {crops.map((c) => (
+                <div
+                  key={c.key}
+                  className="flex items-center gap-2 rounded-full bg-[var(--forest-soft)] border border-[var(--forest-accent)]/30 px-3 py-2"
+                >
+                  <span className="text-lg" aria-hidden>
+                    {c.emoji}
+                  </span>
+                  <span className="text-xs font-semibold text-[var(--forest-dark)] flex-1">
+                    {tc(c.key)}
+                  </span>
+                  <span className="text-[var(--forest-mid)]" aria-hidden>
+                    ✓
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

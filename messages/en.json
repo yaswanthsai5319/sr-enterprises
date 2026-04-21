@@ -4,7 +4,8 @@
     "products": "Products",
     "about": "About",
     "gallery": "Gallery",
-    "contact": "Contact"
+    "contact": "Contact",
+    "getQuote": "Get Quote"
   },
   "hero": {
     "subtitle": "MANUFACTURER & SUPPLIER",
@@ -16,6 +17,12 @@
     "lenoBags": "Leno Bags",
     "ppBags": "PP Woven Bags"
   },
+  "trust": {
+    "products": "3+ Products",
+    "delivery": "All India Delivery",
+    "print": "Custom Print Available",
+    "machinery": "Modern Machinery"
+  },
   "why": {
     "title": "Why Use Fruit Protection Covers?",
     "subtitle": "See the difference they make",
@@ -25,35 +32,60 @@
     "sunShieldDesc": "Guards against sunburn and rain damage",
     "betterPrice": "Better Price",
     "betterPriceDesc": "Unblemished fruit sells at premium rates",
-    "without": "WITHOUT COVER",
+    "without": "Without Cover",
     "withoutDesc": "Spots, insect marks, lower price",
-    "with": "WITH COVER",
-    "withDesc": "Clean, premium quality, top price"
+    "with": "With Cover",
+    "withDesc": "Clean, premium quality, top price",
+    "dragHint": "Drag to compare"
   },
   "products": {
     "title": "Our Products",
     "enquire": "Enquire Now",
+    "cropTitle": "Works Great For",
     "fruitCovers": {
       "name": "Fruit Protection Covers",
       "description": "Non-woven covers for mango, grapes, pomegranate, dragon fruit, orange & more",
-      "tag1": "Pest Free",
-      "tag2": "Reusable",
-      "tag3": "Breathable"
+      "specs": "Reusable · Breathable · Pest-free",
+      "tag1": "Reusable",
+      "tag2": "Breathable",
+      "tag3": "Pest-free"
     },
     "lenoBags": {
       "name": "Leno Mesh Bags",
       "description": "Breathable mesh bags for onions, potatoes, vegetables — available in all colors & sizes",
-      "tag1": "Ventilated",
-      "tag2": "Strong",
-      "tag3": "Custom Sizes"
+      "specs": "All colors · Custom sizes · Ventilated",
+      "tag1": "All colors",
+      "tag2": "Custom sizes",
+      "tag3": "Ventilated"
     },
     "ppBags": {
       "name": "PP Woven Bags",
       "description": "Heavy-duty woven bags for rice, fertilizer, grains, cement — with custom printing",
-      "tag1": "Heavy Duty",
-      "tag2": "Custom Print",
-      "tag3": "Bulk Orders"
+      "specs": "Custom print · Heavy duty · Bulk orders",
+      "tag1": "Custom print",
+      "tag2": "Heavy duty",
+      "tag3": "Bulk orders"
     }
+  },
+  "crops": {
+    "mango": "Mango",
+    "grapes": "Grapes",
+    "pomegranate": "Pomegranate",
+    "dragonFruit": "Dragon Fruit",
+    "orange": "Orange",
+    "guava": "Guava"
+  },
+  "process": {
+    "eyebrow": "Our Process",
+    "title": "How We Make It",
+    "step1": "Raw Material",
+    "step1Desc": "Quality polymer & fabric sourcing",
+    "step2": "Manufacturing",
+    "step2Desc": "Modern automated machinery",
+    "step3": "Quality Check",
+    "step3Desc": "Every batch inspected",
+    "step4": "Dispatch",
+    "step4Desc": "Shipped across India"
   },
   "about": {
     "title": "About Our Factory",
@@ -79,6 +111,14 @@
     "addressText": "SR Enterprises, Burri Venkateswarao Gardens, Vijayawada To Nuzivid Road, Pothavarappadu, Agiripalli Mandal, Eluru District, 521212, Andhra Pradesh",
     "openMaps": "Open in Google Maps",
     "email": "Email",
-    "copyright": "© 2026 SR Enterprises. All rights reserved."
+    "copyright": "© 2026 SR Enterprises. All rights reserved.",
+    "formTitle": "Bulk Enquiry",
+    "formSubtitle": "Fill the form and we'll reply on WhatsApp",
+    "productLabel": "Product",
+    "quantityLabel": "Quantity",
+    "quantityPlaceholder": "e.g. 500",
+    "messageLabel": "Message (optional)",
+    "messagePlaceholder": "Any specific requirements…",
+    "submit": "Send on WhatsApp"
   }
 }

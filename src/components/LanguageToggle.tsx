@@ -22,7 +22,7 @@ export default function LanguageToggle() {
   }
 
   return (
-    <div className="flex rounded-full border border-white/15 bg-white/[0.04] p-[3px]">
+    <div className="flex rounded-full border border-white/15 bg-white/[0.06] p-[2px]">
       {locales.map((item) => {
         const active = locale === item.code;
         return (
@@ -31,10 +31,10 @@ export default function LanguageToggle() {
             type="button"
             onClick={() => switchLocale(item.code)}
             aria-pressed={active}
-            className={`min-h-8 min-w-9 rounded-full px-2.5 text-xs font-bold transition-all duration-300 ${
+            className={`min-h-7 min-w-8 rounded-full px-2.5 text-[11px] font-bold transition-all duration-300 ${
               active
-                ? "bg-[var(--gold)] text-[var(--navy)] shadow-sm shadow-amber-400/20"
-                : "text-white/60 hover:text-white hover:bg-white/10"
+                ? "bg-[var(--amber)] text-[var(--forest-dark)] shadow-sm"
+                : "text-white/70 hover:text-white hover:bg-white/10"
             }`}
           >
             {item.label}

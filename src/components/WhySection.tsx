@@ -16,7 +16,6 @@ export default function WhySection() {
   return (
     <section className="section-wrap bg-[var(--cream)]">
       <div className="section-max">
-        {/* Heading */}
         <FadeIn className="max-w-2xl">
           <span className="section-eyebrow">Benefits</span>
           <h2 className="section-heading">{t("title")}</h2>
@@ -27,7 +26,7 @@ export default function WhySection() {
         {/* Benefit cards */}
         <div className="mt-14 grid gap-5 sm:grid-cols-3">
           {benefits.map((b, i) => (
-            <FadeIn key={b.key} delay={0.1 + i * 0.12}>
+            <FadeIn key={b.key} delay={0.1 + i * 0.1}>
               <div className="card p-7 h-full">
                 {b.image ? (
                   <div className={`relative h-20 -mx-7 rounded-xl ${b.bg} mb-5 overflow-hidden`}>
@@ -38,10 +37,10 @@ export default function WhySection() {
                     {b.icon}
                   </div>
                 )}
-                <h3 className="font-display text-lg font-semibold text-[var(--navy)]">
+                <h3 className="font-display text-lg font-semibold text-[var(--forest-dark)]">
                   {t(b.key)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)]">
                   {t(b.descKey)}
                 </p>
               </div>
@@ -49,64 +48,43 @@ export default function WhySection() {
           ))}
         </div>
 
-        {/* Before → After comparison */}
+        {/* Before / After — static side-by-side */}
         <FadeIn delay={0.2} className="mt-16">
-          <div className="overflow-hidden rounded-2xl border border-black/[0.06] bg-white">
-            <div className="grid lg:grid-cols-[1fr_1fr_1.4fr]">
-              {/* Without Cover */}
-              <div className="relative min-h-[240px] lg:min-h-[280px] border-b lg:border-b-0 lg:border-r border-black/[0.06]">
-                <Image
-                  src="/images/unprotected-mango.jpg"
-                  alt="Unprotected mango without cover"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 340px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/70 via-red-900/20 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-red-600 px-3 py-1 text-xs font-semibold text-white shadow">
-                    ❌ {t("without")}
-                  </span>
-                </div>
-                <p className="absolute bottom-4 left-4 right-4 text-xs text-red-200/90 font-medium">
-                  {t("withoutDesc")}
-                </p>
-              </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {/* Without Cover */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/unprotected-mango.jpg"
+                alt={t("without")}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-red-900/70 via-red-900/10 to-transparent" />
+              <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-red-600 text-white px-3 py-1 text-xs font-semibold shadow">
+                ❌ {t("without")}
+              </span>
+              <p className="absolute bottom-4 left-4 right-4 text-xs font-medium text-red-50">
+                {t("withoutDesc")}
+              </p>
+            </div>
 
-              {/* With Cover */}
-              <div className="relative min-h-[240px] lg:min-h-[280px] border-b lg:border-b-0 lg:border-r border-black/[0.06]">
-                <Image
-                  src="/images/protected-mango.jpg"
-                  alt="Protected mango with fruit cover"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 340px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-900/20 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white shadow">
-                    ✅ {t("with")}
-                  </span>
-                </div>
-                <p className="absolute bottom-4 left-4 right-4 text-xs text-emerald-200/90 font-medium">
-                  {t("withDesc")}
-                </p>
-              </div>
-
-              {/* Result image */}
-              <div className="relative min-h-[240px] lg:min-h-[280px]">
-                <Image
-                  src="/images/mango-result.jpeg"
-                  alt="Premium mangoes grown with fruit protection covers"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-4 left-4 right-4 font-display text-sm font-semibold text-white">
-                  Premium Quality Result ✦
-                </p>
-              </div>
+            {/* With Cover */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/protected-mango.jpg"
+                alt={t("with")}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-dark)]/70 via-[var(--forest-dark)]/10 to-transparent" />
+              <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-[var(--forest-mid)] text-white px-3 py-1 text-xs font-semibold shadow">
+                ✅ {t("with")}
+              </span>
+              <p className="absolute bottom-4 left-4 right-4 text-xs font-medium text-emerald-50">
+                {t("withDesc")}
+              </p>
             </div>
           </div>
         </FadeIn>

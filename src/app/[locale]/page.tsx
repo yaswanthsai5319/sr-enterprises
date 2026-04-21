@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
+import Process from "@/components/Process";
 import Products from "@/components/Products";
 import WhySection from "@/components/WhySection";
 import { routing } from "@/i18n/routing";
@@ -23,6 +24,7 @@ export default async function HomePage({ params }: Props) {
       <Hero />
       <WhySection />
       <Products />
+      <Process />
       <About />
       <Gallery />
       <Contact />

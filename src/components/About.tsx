@@ -42,9 +42,9 @@ export default function About() {
                 </div>
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-4 left-6 rounded-xl bg-[var(--navy)] text-white px-5 py-3 shadow-xl">
-                <p className="font-display text-2xl font-bold text-[var(--gold)]">Est. 2026</p>
-                <p className="text-[11px] text-white/60 uppercase tracking-wider">Andhra Pradesh</p>
+              <div className="absolute -bottom-4 left-6 rounded-xl bg-[var(--forest-dark)] text-white px-5 py-3 shadow-xl">
+                <p className="font-display text-2xl font-semibold text-[var(--amber)]">Est. 2026</p>
+                <p className="text-[11px] text-white/70 uppercase tracking-wider">Andhra Pradesh</p>
               </div>
             </div>
           </FadeIn>
@@ -73,8 +73,8 @@ export default function About() {
                   <div className="flex gap-3 items-start rounded-xl bg-[var(--warm-gray)] p-4 border border-black/[0.04]">
                     <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="text-sm font-bold text-[var(--navy)]">{t(item.key)}</p>
-                      <p className="text-xs text-[var(--muted)] mt-0.5 leading-relaxed">
+                      <p className="text-sm font-semibold text-[var(--forest-dark)]">{t(item.key)}</p>
+                      <p className="text-xs text-[var(--ink-muted)] mt-0.5 leading-relaxed">
                         {t(item.descKey)}
                       </p>
                     </div>
