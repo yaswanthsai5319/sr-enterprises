@@ -9,7 +9,7 @@ import FadeIn from "./FadeIn";
 const images = [
   { src: "/images/fruit-covers-product.jpeg", alt: "Fruit protection covers" },
   { src: "/images/protected-mango.jpg", alt: "Protected mango – with cover" },
-  { src: "/images/gallery-1.jpeg", alt: "SR Enterprises branded fruit covers — bundled stacks" },
+  { src: "/images/cover-1.jpeg", alt: "SR Enterprises branded fruit covers — bundled stacks" },
   { src: "/images/gallery-2.jpeg", alt: "SR Enterprises branded fruit cover close-up" },
   { src: "/images/gallery-3.jpeg", alt: "SR Enterprises fruit cover fresh off the machine" },
   { src: "/images/leno-mesh-bags-vegetables.jpeg", alt: "Leno mesh bags with vegetables" },
